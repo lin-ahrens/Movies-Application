@@ -4,10 +4,12 @@
 import sayHello from './hello';
 sayHello('World');
 
+
 /**
  * require style imports
  */
-const {getMovies} = require('./api.js');
+const {getMovies,addMovie} = require('./api.js');
+
 const $ = require('jquery');
 
 
@@ -36,6 +38,15 @@ getMovies().then((movies) => {
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
+});
+
+$("#btn").click(()=> {
+  let typeMovieTitle= $('#typeMovieTitle').val();
+  let typeMovieRating= $('#typeMovieRating').val();
+  addMovie(typeMovieTitle,typeMovieRating).then((response)=>{})
+  console.log("movie add")
+}).catch(()=>{
+  console.log("error")
 });
 
 

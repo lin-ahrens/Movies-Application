@@ -11,8 +11,24 @@
         <h1>Hello There!</h1>
         <p>To get started, edit <code>src/index.js</code>.</p>
     </div>
+    <div class="containerAddNewMovies">
+        <h2>Add A Movie</h2>
+        <form action="POST">
+            <label for="typeMovieTitle">Title</label>
+            <input type="text" name="typeMovieTitle" id="typeMovieTitle">
+            <label for="typeMovieRating">Rating</label>
+            <input type="text" name="typeMovieRating" id="typeMovieRating">
+            <label for="typeMovieId">ID</label>
+            <input type="text" name="typeMovieId" id="typeMovieId">
+
+        </form>
+        <button id="btn">Add</button>
+
+    </div>
     <div id="loading">Loading ....</div>
     <div id="movies"></div>
+
+
 
 
     <script src="./main.js"></script>
