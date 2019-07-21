@@ -13,31 +13,45 @@ const {getMovies,addMovie,deleteMovie} = require('./api.js');
 const $ = require('jquery');
 
 $(".container").css("background-color","pink");
-$("#movies").hide();
+
+
 
 function loaded() {
-
-
+  $("#movies").hide();
   getMovies().then((movies) => {
     console.log('Here are all the movies:');
     let storeMovies = "";
+
     movies.forEach(({title, rating, id}) => {
 
       storeMovies += `<div class="title">Title: ${title} </div>`;
       storeMovies += `<div class="rating">Rating: ${rating} </div>`;
-      storeMovies += `<button class="remove" data-value="${id}">Remove</button></div>`;
+      storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button></div>`;
 
       console.log(`id#${id} - ${title} - rating: ${rating}`);
+
+
     });
+
     $('#movies').html(storeMovies);
     $("#loading").fadeOut(2000, function () {
       $("#movies").show();
-      $("#movies").fadeIn.text(storeMovies)
     })
 
+    $(".remove").click((event) => {
+      const id =  event.target.value;
 
-    addDeleteHandler();
+      console.log("Click button yay", id);
+      deleteMovie(id)
+          .then((response) => {
+            console.log("movie deleted")
+          loaded()
+          }).catch(() => {
+        console.log("not working! error")
+      });
 
+
+    })
 
 //放置在then裡面能確保執行時畫面能同步
   }).catch((error) => {
@@ -48,7 +62,7 @@ function loaded() {
 
 loaded(); // initial page load
 
-$("#btn").click(()=> {
+$("#add-movie-btn").click(()=> {
   let typeMovieTitle= $('#typeMovieTitle').val();
   let typeMovieRating= $('#typeMovieRating').val();
   addMovie(typeMovieTitle,typeMovieRating).then((response)=>{
@@ -60,19 +74,7 @@ $("#btn").click(()=> {
 });
 
 
-function addDeleteHandler(){
-  $(".remove").click(() => {
-    let movieRemove = $(this).data("value");
 
-    console.log($(this));
-    console.log("test: ",movieRemove)
-    deleteMovie(movieRemove).then((response) => {
-      $("")
-    });
-    console.log("movie delete")
-  }).catch(() => {
-    console.log("not working!")
-  });
-}
+
 
 
