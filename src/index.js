@@ -15,7 +15,6 @@ const $ = require('jquery');
 $(".container").css("background-color","pink");
 
 
-
 function loaded() {
   $("#movies").hide();
   getMovies().then((movies) => {
@@ -38,12 +37,13 @@ function loaded() {
 
     });
 
-
+// =============== On Load================
     $('#movies').html(storeMovies);
     $("#loading").fadeOut(2000, function () {
       $("#movies").show();
     })
 
+// =============== Remove Movie================
     $(".remove").click((event) => {
       const id =  event.target.value;
 
@@ -55,8 +55,9 @@ function loaded() {
           }).catch(() => {
         console.log("not working! error")
       });
-    })
+    });
 
+// =============== Edit Movie================
     $(".edit").click((event)=>{
       const id = event.target.value;
       // const newTitle = $(`.movie-container-${id} .title`).data("value");
@@ -69,8 +70,9 @@ function loaded() {
       $(`.movie-container-${id} .rating`).html(`Rating: <input id="edit-rating-${id}"  value="${newRating}">`)
       $(`.movie-container-${id} .genre`).html(`Genre: <input id="edit-genre-${id}"  value="${newGenre}">`)
       // $(`.movie-container-${id} .edit`).hide()
-    })
+    });
 
+// =============== Change Movie================
     $(".change").click((event)=>{
       const id = event.target.value;
       const newTitleDataVersion = $(`.movie-container-${id} .title`).data("value");
@@ -98,6 +100,7 @@ function loaded() {
 
 loaded(); // initial page load
 
+// =============== Add Movie================
 $("#add-movie-btn").click(()=> {
   let typeMovieTitle= $('#typeMovieTitle').val();
   let typeMovieRating= $('#typeMovieRating').val();
@@ -110,9 +113,41 @@ $("#add-movie-btn").click(()=> {
   console.log("movie add")
 });
 
+// ========Sort Movies===========
+
+$("#clickSearchTitle").click(function () {
+  getMovies().then((movies) => {
+    let storeMovies = "";
+
+    const sortArray =
+        movies.sort(function (a, b) {
+          if (a.title < b.title) {
+            return -1
+          } else if (a.title > b.title) {
+            return 1
+          } else {
+            return 0
+          }
+        })
 
 
+    movies.forEach(({title}) => {
 
+      storeMovies += `<div class="movie-container-${id}">`;
+      storeMovies += `<div class="title" data-value="${title}">Title: ${title} </div>`;
+
+    })
+  })
+})
+  console.log("search show")
+// var sortMovies = dataArr['hello'];
+// sortArray.sort(function(a,b) {
+//   if ( a.region < b.region )
+//     return -1;
+//   if ( a.region > b.region )
+//     return 1;
+//   return 0;
+// } );
 
 
 
