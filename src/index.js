@@ -28,7 +28,7 @@ function loaded() {
       storeMovies += `<div class="title" data-value="${title}">Title: ${title} </div>`;
       storeMovies += `<div class="rating" data-value="${rating}">Rating: ${rating} </div>`;
       storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button></div>`;
-      storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;
+      storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;4
       storeMovies += `</div>`;
 
       console.log(`id#${id} - ${title} - rating: ${rating}`);

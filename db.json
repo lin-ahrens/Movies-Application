@@ -31,11 +31,6 @@
       "id": 7
     },
     {
-      "title": "Frozen",
-      "rating": "2",
-      "id": 8
-    },
-    {
       "title": "Aquaman",
       "rating": "3",
       "id": 9
@@ -46,49 +41,9 @@
       "id": 10
     },
     {
-      "id": 20
-    },
-    {
-      "id": 23
-    },
-    {
-      "id": 24
-    },
-    {
-      "id": 25
-    },
-    {
-      "id": 26
-    },
-    {
-      "title": "name",
-      "rating": "4",
-      "id": 27
-    },
-    {
-      "title": "book",
-      "rating": "4",
-      "id": 29
-    },
-    {
-      "title": "Dane is Awesome",
+      "title": "Wonderwomn",
       "rating": "5",
-      "id": 30
-    },
-    {
-      "title": "tyeasdf",
-      "rating": "asdfasdf",
-      "id": 31
-    },
-    {
-      "title": "dsfdgfhjkl",
-      "rating": "sdfghjkl;",
-      "id": 32
-    },
-    {
-      "title": "victor",
-      "rating": "5",
-      "id": 33
+      "id": 11
     }
   ]
 }
