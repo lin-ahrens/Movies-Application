@@ -1,14 +1,49 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
-      "id": 1
-    },
-    {
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "id": 2
+    },
+    {
+      "title": "Tory Story 4",
+      "rating": "4",
+      "id": 3
+    },
+    {
+      "title": "Avengers: End Game",
+      "rating": "5",
+      "id": 4
+    },
+    {
+      "title": "Aladdin",
+      "rating": "3",
+      "id": 5
+    },
+    {
+      "title": "Fight Club",
+      "rating": "4",
+      "id": 6
+    },
+    {
+      "title": "The Dark Night",
+      "rating": "5",
+      "id": 7
+    },
+    {
+      "title": "Aquaman",
+      "rating": "3",
+      "id": 9
+    },
+    {
+      "title": "The Room",
+      "rating": "1",
+      "id": 10
+    },
+    {
+      "title": "Wonderwomn",
+      "rating": "5",
+      "id": 11
     }
   ]
 }
