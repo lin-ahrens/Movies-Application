@@ -57,20 +57,24 @@ function loaded() {
 
     $(".edit").click((event)=>{
       const id = event.target.value;
-      const newTitle = $(`.movie-container-${id} .title`).data("value");
-      const newRating = $(`.movie-container-${id} .rating`).data("value");
+      // const newTitle = $(`.movie-container-${id} .title`).data("value");
+      // const newRating = $(`.movie-container-${id} .rating`).data("value");
+      const newTitle = $(`.movie-container-${id} .title`).val();
+      const newRating = $(`.movie-container-${id} .rating`).val();
       console.log("edit movie",id);
-      $(`.movie-container-${id} .title`).html(`Title: <input value="${newTitle}">`)
-      $(`.movie-container-${id} .rating`).html(`Rating: <input value="${newRating}">`)
+      $(`.movie-container-${id} .title`).html(`Title: <input id="edit-title-${id}" value="${newTitle}">`)
+      $(`.movie-container-${id} .rating`).html(`Rating: <input id="edit-rating-${id}"  value="${newRating}">`)
       // $(`.movie-container-${id} .edit`).hide()
     })
 
     $(".change").click((event)=>{
       const id = event.target.value;
-      const newTitle = $(`.movie-container-${id} .title`).data("value");
-      const editTitle =$(`.movie-container-${id} .title`).html(`Title: <input value="${newTitle}">`);
-      const newRating =  $(`.movie-container-${id} .rating`).data("value");
-      const editRating = $(`.movie-container-${id} .rating`).html(`Rating: <input value="${newRating}">`)
+      const newTitleDataVersion = $(`.movie-container-${id} .title`).data("value");
+
+      // const newTitle = $(`.movie-container-${id} .title`).val();
+      const editTitle =$(`#edit-title-${id}`).val();
+      // const newRating =  $(`.movie-container-${id} .rating`).val();
+      const editRating = $(`#edit-rating-${id}`).val();
 
       editMovie(id, editTitle,editRating)
           .then((response)=>{

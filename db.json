@@ -1,8 +1,13 @@
 {
   "movies": [
     {
+      "title": "Casablanca",
+      "rating": "4",
+      "id": 1
+    },
+    {
       "title": "Star Wars: A New Hope",
-      "rating": "5",
+      "rating": "3",
       "id": 2
     },
     {
@@ -21,72 +26,14 @@
       "id": 5
     },
     {
-      "title": "Fight Club",
-      "rating": "4",
+      "title": "Avengers-edit",
+      "rating": "1",
       "id": 6
     },
     {
       "title": "The Dark Night",
       "rating": "5",
       "id": 7
-    },
-    {
-      "title": "The Room",
-      "rating": "1",
-      "id": 10
-    },
-    {
-      "title": {
-        "0": {
-          "jQuery34102839237479897112": {
-            "value": "[object Object]"
-          }
-        },
-        "length": 1,
-        "prevObject": {
-          "0": {
-            "location": {
-              "href": "http://localhost:1313/",
-              "ancestorOrigins": {},
-              "origin": "http://localhost:1313",
-              "protocol": "http:",
-              "host": "localhost:1313",
-              "hostname": "localhost",
-              "port": "1313",
-              "pathname": "/",
-              "search": "",
-              "hash": ""
-            }
-          },
-          "length": 1
-        }
-      },
-      "rating": {
-        "0": {
-          "jQuery34102839237479897112": {
-            "value": "[object Object]"
-          }
-        },
-        "length": 1,
-        "prevObject": {
-          "0": {
-            "location": {
-              "href": "http://localhost:1313/",
-              "ancestorOrigins": {},
-              "origin": "http://localhost:1313",
-              "protocol": "http:",
-              "host": "localhost:1313",
-              "hostname": "localhost",
-              "port": "1313",
-              "pathname": "/",
-              "search": "",
-              "hash": ""
-            }
-          },
-          "length": 1
-        }
-      },
-      "id": 11
     }
   ]
 }
