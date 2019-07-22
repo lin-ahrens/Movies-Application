@@ -11,6 +11,50 @@
         <h1>Hello There!</h1>
 <!--        <p>To get started, edit <code>src/index.js</code>.</p>-->
     </div>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Sort By:</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#titleSearch" id="clickSearchTitle">Title</a>
+            <a href="#ratingSearch">Rating</a>
+            <a href="#categorySearch">Category</a>
+        </div>
+    </div>
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+
+    <!--    ============CURRENT HTML===========================-->
     <div class="containerAddNewMovies">
         <h2>Add A Movie</h2>
         <form action="POST">
