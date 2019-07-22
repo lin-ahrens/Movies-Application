@@ -22,20 +22,22 @@ function loaded() {
     console.log('Here are all the movies:');
     let storeMovies = "";
 
-    movies.forEach(({title, rating, id}) => {
+    movies.forEach(({title, rating, genre, id}) => {
 
       storeMovies += `<div class="movie-container-${id}">`;
       storeMovies += `<div class="title" data-value="${title}">Title: ${title} </div>`;
       storeMovies += `<div class="rating" data-value="${rating}">Rating: ${rating} </div>`;
+      storeMovies += `<div class="genre" data-value="${genre}">Category: ${genre} </div>`;
       storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button></div>`;
       storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;
       storeMovies += `<button class="change" id="change-${id}" value="${id}">Change Movie</button>`;
       storeMovies += `</div>`;
 
-      console.log(`id#${id} - ${title} - rating: ${rating}`);
+      console.log(`id#${id} - ${title} - rating: ${rating} - genre: ${genre}`);
 
 
     });
+
 
     $('#movies').html(storeMovies);
     $("#loading").fadeOut(2000, function () {
@@ -61,9 +63,11 @@ function loaded() {
       // const newRating = $(`.movie-container-${id} .rating`).data("value");
       const newTitle = $(`.movie-container-${id} .title`).val();
       const newRating = $(`.movie-container-${id} .rating`).val();
+      const newGenre = $(`.movie-container-${id} .genre`).val();
       console.log("edit movie",id);
       $(`.movie-container-${id} .title`).html(`Title: <input id="edit-title-${id}" value="${newTitle}">`)
       $(`.movie-container-${id} .rating`).html(`Rating: <input id="edit-rating-${id}"  value="${newRating}">`)
+      $(`.movie-container-${id} .genre`).html(`Genre: <input id="edit-genre-${id}"  value="${newGenre}">`)
       // $(`.movie-container-${id} .edit`).hide()
     })
 
@@ -75,8 +79,8 @@ function loaded() {
       const editTitle =$(`#edit-title-${id}`).val();
       // const newRating =  $(`.movie-container-${id} .rating`).val();
       const editRating = $(`#edit-rating-${id}`).val();
-
-      editMovie(id, editTitle,editRating)
+      const editGenre = $(`#edit-genre-${id}`).val()
+      editMovie(id, editTitle,editRating,editGenre)
           .then((response)=>{
             console.log("movie edit",id);
             loaded()
@@ -97,7 +101,10 @@ loaded(); // initial page load
 $("#add-movie-btn").click(()=> {
   let typeMovieTitle= $('#typeMovieTitle').val();
   let typeMovieRating= $('#typeMovieRating').val();
-  addMovie(typeMovieTitle,typeMovieRating).then((response)=>{
+  let typeMovieGenre= $('#typeMovieGenre').val();
+  addMovie(typeMovieTitle,typeMovieRating,typeMovieGenre).then((response)=>{
+
+    $(this).prop('disabled', true);
     loaded()
   });
   console.log("movie add")

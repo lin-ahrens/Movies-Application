@@ -5,8 +5,8 @@ module.exports = {
 
 
   },
-  addMovie: (title, rating) => {
-    const movie={title: title, rating:rating}
+  addMovie: (title, rating, genre) => {
+    const movie={title: title, rating:rating, genre:genre}
     const options={
       method: "POST" ,
       headers:{
@@ -23,8 +23,8 @@ module.exports = {
     })
   },
 
-  editMovie:(id, title, rating)=> {
-    const movie = {title: title, rating: rating}
+  editMovie:(id, title, rating, genre)=> {
+    const movie = {title: title, rating: rating, genre:genre}
     const options = {
       method: "PUT",
       headers: {
