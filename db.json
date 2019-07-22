@@ -9,27 +9,56 @@
     {
       "title": "Tory Story 4",
       "rating": "4",
+      "genre": "Animation",
       "id": 3
     },
     {
       "title": "Avengers: End Game",
       "rating": "5",
+      "genre": "Action",
       "id": 4
     },
     {
       "title": "Aladdin",
       "rating": "3",
+      "genre": "Animation",
       "id": 5
     },
     {
-      "title": "Avengers-edit",
+      "title": "The Room",
       "rating": "1",
+      "genre": "Cult",
       "id": 6
     },
     {
       "title": "The Dark Night",
       "rating": "5",
+      "genre": "Action",
       "id": 7
+    },
+    {
+      "title": "It",
+      "rating": "5",
+      "genre": "Horror",
+      "id": 8
+    },
+    {
+      "title": "When Harry Met Sally",
+      "rating": "3",
+      "genre": "Comedy",
+      "id": 9
+    },
+    {
+      "title": "Guess Who's Coming To Dinner",
+      "rating": "5",
+      "genre": "Drama",
+      "id": 10
+    },
+    {
+      "title": "Espresso 3",
+      "rating": "4",
+      "genre": "Dark",
+      "id": 11
     }
   ]
 }
