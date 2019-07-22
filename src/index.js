@@ -28,7 +28,8 @@ function loaded() {
       storeMovies += `<div class="title" data-value="${title}">Title: ${title} </div>`;
       storeMovies += `<div class="rating" data-value="${rating}">Rating: ${rating} </div>`;
       storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button></div>`;
-      storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;4
+      storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;
+      storeMovies += `<button class="change" id="change-${id}" value="${id}">Change Movie</button>`;
       storeMovies += `</div>`;
 
       console.log(`id#${id} - ${title} - rating: ${rating}`);
@@ -61,7 +62,23 @@ function loaded() {
       console.log("edit movie",id);
       $(`.movie-container-${id} .title`).html(`Title: <input value="${newTitle}">`)
       $(`.movie-container-${id} .rating`).html(`Rating: <input value="${newRating}">`)
-      $(`.movie-container-${id} .edit`).hide()
+      // $(`.movie-container-${id} .edit`).hide()
+    })
+
+    $(".change").click((event)=>{
+      const id = event.target.value;
+      const newTitle = $(`.movie-container-${id} .title`).data("value");
+      const editTitle =$(`.movie-container-${id} .title`).html(`Title: <input value="${newTitle}">`);
+      const newRating =  $(`.movie-container-${id} .rating`).data("value");
+      const editRating = $(`.movie-container-${id} .rating`).html(`Rating: <input value="${newRating}">`)
+
+      editMovie(id, editTitle,editRating)
+          .then((response)=>{
+            console.log("movie edit",id);
+            loaded()
+          }).catch(()=>{
+            console.log("edit movie not working! error")
+      })
     })
 
 //放置在then裡面能確保執行時畫面能同步

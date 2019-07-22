@@ -31,18 +31,61 @@
       "id": 7
     },
     {
-      "title": "Aquaman",
-      "rating": "3",
-      "id": 9
-    },
-    {
       "title": "The Room",
       "rating": "1",
       "id": 10
     },
     {
-      "title": "Wonderwomn",
-      "rating": "5",
+      "title": {
+        "0": {
+          "jQuery34102839237479897112": {
+            "value": "[object Object]"
+          }
+        },
+        "length": 1,
+        "prevObject": {
+          "0": {
+            "location": {
+              "href": "http://localhost:1313/",
+              "ancestorOrigins": {},
+              "origin": "http://localhost:1313",
+              "protocol": "http:",
+              "host": "localhost:1313",
+              "hostname": "localhost",
+              "port": "1313",
+              "pathname": "/",
+              "search": "",
+              "hash": ""
+            }
+          },
+          "length": 1
+        }
+      },
+      "rating": {
+        "0": {
+          "jQuery34102839237479897112": {
+            "value": "[object Object]"
+          }
+        },
+        "length": 1,
+        "prevObject": {
+          "0": {
+            "location": {
+              "href": "http://localhost:1313/",
+              "ancestorOrigins": {},
+              "origin": "http://localhost:1313",
+              "protocol": "http:",
+              "host": "localhost:1313",
+              "hostname": "localhost",
+              "port": "1313",
+              "pathname": "/",
+              "search": "",
+              "hash": ""
+            }
+          },
+          "length": 1
+        }
+      },
       "id": 11
     }
   ]
