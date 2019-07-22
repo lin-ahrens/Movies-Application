@@ -8,7 +8,7 @@ sayHello('World');
 /**
  * require style imports
  */
-const {getMovies,addMovie,deleteMovie} = require('./api.js');
+const {getMovies,addMovie,deleteMovie,editMovie} = require('./api.js');
 
 const $ = require('jquery');
 
@@ -24,9 +24,12 @@ function loaded() {
 
     movies.forEach(({title, rating, id}) => {
 
-      storeMovies += `<div class="title">Title: ${title} </div>`;
-      storeMovies += `<div class="rating">Rating: ${rating} </div>`;
+      storeMovies += `<div class="movie-container-${id}">`;
+      storeMovies += `<div class="title" data-value="${title}">Title: ${title} </div>`;
+      storeMovies += `<div class="rating" data-value="${rating}">Rating: ${rating} </div>`;
       storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button></div>`;
+      storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;
+      storeMovies += `</div>`;
 
       console.log(`id#${id} - ${title} - rating: ${rating}`);
 
@@ -49,7 +52,16 @@ function loaded() {
           }).catch(() => {
         console.log("not working! error")
       });
+    })
 
+    $(".edit").click((event)=>{
+      const id = event.target.value;
+      const newTitle = $(`.movie-container-${id} .title`).data("value");
+      const newRating = $(`.movie-container-${id} .rating`).data("value");
+      console.log("edit movie",id);
+      $(`.movie-container-${id} .title`).html(`Title: <input value="${newTitle}">`)
+      $(`.movie-container-${id} .rating`).html(`Rating: <input value="${newRating}">`)
+      $(`.movie-container-${id} .edit`).hide()
 
     })
 
@@ -69,9 +81,10 @@ $("#add-movie-btn").click(()=> {
     loaded()
   });
   console.log("movie add")
-}).catch(()=>{
-  console.log("error")
 });
+
+
+
 
 
 
