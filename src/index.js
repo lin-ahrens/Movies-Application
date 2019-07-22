@@ -62,7 +62,6 @@ function loaded() {
       $(`.movie-container-${id} .title`).html(`Title: <input value="${newTitle}">`)
       $(`.movie-container-${id} .rating`).html(`Rating: <input value="${newRating}">`)
       $(`.movie-container-${id} .edit`).hide()
-
     })
 
 //放置在then裡面能確保執行時畫面能同步
