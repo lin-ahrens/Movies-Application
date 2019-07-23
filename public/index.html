@@ -62,12 +62,19 @@
     <div class="containerAddNewMovies">
         <h2>Add A Movie</h2>
         <form action="POST">
-            <label for="typeMovieTitle">Title</label>
-            <input type="text" name="typeMovieTitle" id="typeMovieTitle">
-            <label for="typeMovieRating">Rating</label>
-            <input type="text" name="typeMovieRating" id="typeMovieRating">
-            <label for="typeMovieGenre">Category</label>
-            <input type="text" name="typeMovieGenre" id="typeMovieGenre">
+            <div>
+                <label for="typeMovieTitle">Title</label>
+                <input type="text" name="typeMovieTitle" id="typeMovieTitle">
+            </div>
+            <div>
+                <label for="typeMovieRating">Rating</label>
+                <input type="text" name="typeMovieRating" id="typeMovieRating">
+            </div>
+            <div>
+                <label for="typeMovieGenre">Category</label>
+                <input type="text" name="typeMovieGenre" id="typeMovieGenre">
+            </div>
+
 <!--            <label for="typeMovieId">ID</label>-->
 <!--            <input type="text" name="typeMovieId" id="typeMovieId">-->
 
@@ -76,7 +83,11 @@
 
     </div>
     <div id="loading" class="loader"></div>
-    <div id="movies"></div>
+
+        <div id="movies" >
+
+        </div>
+
 
 
 
