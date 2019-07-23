@@ -1,5 +1,8 @@
 html, body {
     height: 100%;
+    background-image: url("background image1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*.container {*/
@@ -52,6 +55,48 @@ html, body {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+* {
+    box-sizing: border-box;
+}
+​
+body {
+
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+​
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+}
+
+​
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+​
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+​
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
 
 
 
