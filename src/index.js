@@ -11,6 +11,7 @@ sayHello('World');
 const {getMovies,addMovie,deleteMovie,editMovie} = require('./api.js');
 
 const $ = require('jquery');
+require('bootstrap');
 
 $(".container").css("background-color","pink");
 
@@ -55,7 +56,7 @@ function reRun() {
     const editTitle = $(`#edit-title-${id}`).val();
     // const newRating =  $(`.movie-container-${id} .rating`).val();
     const editRating = $(`#edit-rating-${id}`).val();
-    const editGenre = $(`#edit-genre-${id}`).val()
+    const editGenre = $(`#edit-genre-${id}`).val();
     editMovie(id, editTitle, editRating, editGenre)
         .then((response) => {
           console.log("movie edit", id);
@@ -72,13 +73,14 @@ function loaded() {
     console.log('Here are all the movies:');
     let storeMovies = "";
 
-    movies.forEach(({title, rating, genre, id}) => {
+    movies.forEach(({url, title, rating, genre, id}) => {
 
       storeMovies += `<div class="movie-container-${id}">`;
+      storeMovies += `<div class="img-movie"><img src="${url}"></div>`;
       storeMovies += `<div class="title" data-value="${title}">Title: ${title} </div>`;
       storeMovies += `<div class="rating" data-value="${rating}">Rating: ${rating} </div>`;
       storeMovies += `<div class="genre" data-value="${genre}">Category: ${genre} </div>`;
-      storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button></div>`;
+      storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button>`;
       storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;
       storeMovies += `<button class="change" id="change-${id}" value="${id}">Change Movie</button>`;
       storeMovies += `</div>`;
@@ -139,13 +141,14 @@ $("#clickSearchTitle").click(function () {
         console.log(movies);
 
 
-    movies.forEach(({title, rating, genre, id}) => {
+    movies.forEach(({url, title, rating, genre, id}) => {
 
-      storeMovies += `<div class="movie-container-${id}">`;
+      storeMovies += `<div class="movie-container-${id}" >`;
+      storeMovies += `<div class="img-movie"><img src="${url}"></div>`;
       storeMovies += `<div class="title" data-value="${title}">Title: ${title} </div>`;
       storeMovies += `<div class="rating" data-value="${rating}">Rating: ${rating} </div>`;
       storeMovies += `<div class="genre" data-value="${genre}">Category: ${genre} </div>`;
-      storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button></div>`;
+      storeMovies += `<button class="remove" id="remove-${id}" value="${id}">Remove</button>`;
       storeMovies += `<button class="edit" id="edit-${id}" value="${id}">Edit Movie</button>`;
       storeMovies += `<button class="change" id="change-${id}" value="${id}">Change Movie</button>`;
       storeMovies += `</div>`;

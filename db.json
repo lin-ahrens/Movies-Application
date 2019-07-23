@@ -1,58 +1,63 @@
 {
   "movies": [
     {
+      "url": "aladdin.jpeg",
+      "title": "Aladdin",
+      "rating": "4",
+      "genre": "Animation",
+      "id": 1
+    },
+
+    {
+      "url": "sw a new hope.jpeg",
       "title": "Star Wars: A New Hope",
       "rating": "3",
-      "genre": "Sify",
+      "genre": "Scifi",
       "id": 2
     },
     {
-      "title": "Toy Story 4",
-      "rating": "4",
-      "genre": "Animation",
-      "id": 3
-    },
-    {
+      "url": "avengers endgame.jpeg",
       "title": "Avengers: End Game",
       "rating": "5",
       "genre": "Action",
-      "id": 4
+      "id": 3
     },
     {
-      "title": "Aladdin",
-      "rating": "3",
-      "genre": "Animation",
-      "id": 5
-    },
-    {
+      "url": "the room.jpeg",
       "title": "The Room",
       "rating": "1",
       "genre": "Cult",
-      "id": 6
+      "id": 4
     },
     {
+      "url": "The Dark Night Rises.jpeg",
       "title": "The Dark Night",
       "rating": "5",
       "genre": "Action",
-      "id": 7
+      "id": 5
     },
     {
-      "title": "It",
-      "rating": "5",
-      "genre": "Horror",
-      "id": 8
-    },
-    {
+      "url": "When Harry Sally.jpeg",
       "title": "When Harry Met Sally",
       "rating": "3",
       "genre": "Comedy",
-      "id": 9
+      "id": 6
     },
     {
+      "url": "Guess Who.jpeg",
       "title": "Guess Who's Coming To Dinner",
       "rating": "5",
       "genre": "Drama",
-      "id": 10
+      "id": 7
+    },
+    {
+      "url": "Toy Story.jpeg",
+      "title": "Toy Story 4",
+      "rating": "5",
+      "genre": "Animation",
+      "id": 8
     }
+
+
   ]
 }
