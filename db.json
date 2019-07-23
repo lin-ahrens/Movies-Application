@@ -7,7 +7,7 @@
       "id": 2
     },
     {
-      "title": "Tory Story 4",
+      "title": "Toy Story 4",
       "rating": "4",
       "genre": "Animation",
       "id": 3
@@ -53,12 +53,6 @@
       "rating": "5",
       "genre": "Drama",
       "id": 10
-    },
-    {
-      "title": "Espresso 3",
-      "rating": "4",
-      "genre": "Dark",
-      "id": 11
     }
   ]
 }
