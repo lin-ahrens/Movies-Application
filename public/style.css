@@ -1,11 +1,35 @@
-html, body {
+body {
     height: 100%;
+    background-color: lightgrey;
+
     /*background-image: url("ynuKj1.jpeg");*/
     /*background-repeat: repeat*/
 
 
 }
+h1 {
+    color: red;
+    font-size: 80px;
+    padding-top: 30px;
+    font-family: Chalkboard;
+}
+.container {
+    background-image: url("background image1.jpeg");
+    text-align: center;
+    height: 150px;
+    z-index: -1;
+}
 
+#add-movie-btn {
+    margin-left: 30px;
+}
+.newColor {
+    color: floralwhite;
+}
+
+#title {
+    color: white;
+}
 /*.container {*/
 /*    position: relative;*/
 /*    top: 50%;*/
@@ -130,34 +154,82 @@ body {
 
 
 .movie-container-1{
-    padding: 30px;
-    margin: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 .movie-container-2{
-    padding: 30px;
-    margin: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 .movie-container-3{
-    padding: 30px;
-    margin: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 .movie-container-4{
-    padding: 30px;
-    margin: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 .movie-container-5{
-    padding: 30px;
-    margin: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 .movie-container-6{
-    padding: 30px;
-    margin: 30px;
-}
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 .movie-container-7{
-    padding: 30px;
-    margin: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
-.movie-container-8{
-    padding: 30px;
-    margin: 30px;
+
+.movie-container-9{
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }

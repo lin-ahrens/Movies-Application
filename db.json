@@ -7,7 +7,6 @@
       "genre": "Animation",
       "id": 1
     },
-
     {
       "url": "sw a new hope.jpeg",
       "title": "Star Wars: A New Hope",
@@ -56,8 +55,13 @@
       "rating": "5",
       "genre": "Animation",
       "id": 8
+    },
+    {
+      "url": "movie placeholder.jpeg",
+      "title": "",
+      "rating": "",
+      "genre": "",
+      "id": 9
     }
-
-
   ]
 }
